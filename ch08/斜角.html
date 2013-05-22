@@ -1,0 +1,55 @@
+<style>
+#menu{
+    font-family: arial;
+    font-size: 16px;
+}
+#menu a, #menu a:visited{
+    display: block;
+    float:left;
+    position: relative;
+    background-color: #c00;
+    color: #fff;
+    padding: 6px;
+    text-decoration: none;
+    margin: 1px 0 0 1px;
+}
+
+/*div{
+    position: absolute;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    border-style: solid;
+   border-width: 60px;
+   border-color:blue green;
+    top:0;
+    left:0;
+}*/
+#menu a .corner{
+    position: absolute;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    border-bottom: solid 6px #c00;
+    border-left: solid 6px #fff;
+    top:0;
+    left:0;
+}
+
+#menu a:hover{
+    background-color:#f90;
+    color:#333;
+}
+
+#menu a:hover span{
+    border-bottom: solid 6px #f90;
+}
+
+</style>
+<div id="menu">
+    <a href="#"><span class="corner"></span>Home</a>
+    <a href="#"><span class="corner"></span>Contact us</a>
+    <a href="#"><span class="corner"></span>Web Dev</a>
+    <a href="#"><span class="corner"></span>Web Design</a>
+    <a href="#"><span class="corner"></span>Map</span></a>
+</div>

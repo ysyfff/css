@@ -13,11 +13,12 @@ td, th{
 tr{
     background-color: #dfc; 
 }
-tr:hover, tr.hover{
+tr.hover{
     background: #595;
     color:#fff;
 }
 </style>
+
 <table>
     <caption>Book list</caption>
     
@@ -104,3 +105,14 @@ tr:hover, tr.hover{
         </tr>
     </tfoot>
 </table>
+<script>
+    var rows = document.getElementsByTagName('tr');
+    for(var i=0; i<rows.length; i++){
+        rows[i].onmouseover = function(){
+            this.className = 'hover';
+        }
+        rows[i].onmouseout = function(){
+            this.className = "";
+        }
+    }
+</script>

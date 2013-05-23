@@ -1,0 +1,136 @@
+<style>
+table{ 
+    color:#565;
+    font:12px arial;
+}
+
+td, th{
+    
+    border-bottom: 2px solid #b3de94;
+    border-top: 3px solid #ffffff;
+    padding: 9px;
+} 
+tr{
+    background-color: #dfc; 
+}
+tr.hover{
+    background: #595;
+    color:#fff;
+}
+td.hover{
+    background: #595;
+    color:#fff;
+}
+</style>
+
+<table>
+    <caption>Book list</caption>
+    
+    <thead>
+        <tr >
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+            <td>Title</td>
+        </tr>
+    </tdead>
+    <tbody>
+        <tr class="even">
+            <td>Waht</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+        </tr>
+        <tr>
+            <td>Waht</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+        </tr>
+        <tr class="even">
+            <td>Waht</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+        </tr>
+        <tr>
+            <td>Waht</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+        </tr>
+        <tr class="even">
+            <td>Waht</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+        </tr>
+        <tr>
+            <td>Waht</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+        </tr>
+        <tr class="even">
+            <td>Waht</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+        </tr>
+        <tr>
+            <td>Waht</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+            <td>hehe</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Total</td>
+            <td colspan="4">4 books</td>
+        </tr>
+    </tfoot>
+</table>
+<script>
+    var cells = document.getElementsByTagName('td');
+    for(var i=0; i<cells.length; i++){
+        cells[i].onmouseover = function(){
+            this.className = 'hover';
+            for(var j=0; j<cells.length; j++){
+                if(cells[j]==this){
+                    cells[j%6].className='hover';
+                    cells[j-j%6].className='hover';
+                }
+            }
+            
+        }
+        cells[i].onmouseout = function(){
+            this.className = "";
+            for(var j=0; j<cells.length; j++){
+                if(cells[j]==this){
+                    cells[j%6].className='';
+                    cells[j-j%6].className='';
+                }
+            }
+        }
+    }
+
+</script>

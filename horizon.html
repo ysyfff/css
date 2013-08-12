@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        .test{ background:#ccc; width:300px; width:50%; height:80px;}
-        .bc{ margin-left:auto; margin-right:auto;}
-       /* 核心：width定值 + margin-left:auto; margin-right:auto;，二者缺一不可。
-          优：固定宽度容器水平居中实现超级简单，用于页面主体居中特方便。
-          劣：此实现思想无法应用于垂直居中，也无法实现未知宽度的容器水平居中。*/
+<style>
+
+body{margin: 0; padding: 0;}
+.help{background-color: #ccc; height:30px;}
 
 
-    </style>
+.test{width:80%;}
+.bc{ margin-left:auto; margin-right:auto;}
+/* 核心：width定值 + margin-left:auto; margin-right:auto;，二者缺一不可。
+  优：固定宽度容器水平居中实现超级简单，用于页面主体居中特方便。
+  劣：此实现思想无法应用于垂直居中，也无法实现未知宽度的容器水平居中。*/
+
+
+</style>
 </head>
 <body>
-    <div class="test bc">
+    <div class="test bc help">
         Content goes here
     </div>
 </body>

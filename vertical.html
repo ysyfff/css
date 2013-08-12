@@ -5,23 +5,55 @@
 
 body{margin: 0; padding: 0;}
 .help{background-color: #08c; height: 600px; width: 200px;}
+.help2{ background-color: #ddd;}
 
 
 
 .wrapper {display:table;}
 .cell {display:table-cell; vertical-align:middle; }
+/*优点：
+content 可以动态改变高度(不需在 CSS 中定义)。当 wrapper 里没有足够空间时， content 不会被截断
+缺点：
+Internet Explorer(甚至 IE8 beta)中无效，许多嵌套标签(其实没那么糟糕，另一个专题)*/
+
+#outer {height: 600px; width:200px; overflow: hidden; position: relative;}
+#outer[id]{display: table; position: static;}
+
+#middle {position: absolute; top: 50%;}
+#middle[id]{display: table-cell; vertical-align: middle; position: static;}
+
+#inner {position: relative; top: -50%; width: 150px; margin-left: auto; margin-right: auto;} 
+
 </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="cell help">
-            <div class="content">
-                Content goes here
-                Content goes here
-                Content goes here
-                Content goes here
-                Content goes here
+    <div style="float:left">
+        <div class="wrapper">
+            <div class="cell help">
+                <div class="content">
+                    Content goes here
+                    Content goes here
+                    Content goes here
+                    Content goes here
+                    Content goes here
+                </div>
             </div>
+        </div>
+    </div>
+    <div style="float:left;">
+        <div id="outer" class="help2">
+          <div id="middle">
+            <div id="inner">
+                any text<br>
+                any height<br>
+                any content, for example generated from DB<br>
+                everything is vertically centered
+                any text<br>
+                any height<br>
+                any content, for example generated from DB<br>
+                everything is vertically centered
+            </div>
+          </div>
         </div>
     </div>
 </body>
